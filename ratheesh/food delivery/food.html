@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibrant Food Delivery</title>
+  <link rel="stylesheet" href="food.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>ColorBite</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="cart-icon">
+        <img src="cart-icon.png" alt="Cart">
+        <span id="cartCount">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu">
+      <h2>Our Colorful Menu</h2>
+
+      <div class="menu-item">
+        <img src="burger.jpg" alt="Burger">
+        <h3>Rainbow Burger</h3>
+        <p>$9.99</p>
+        <button onclick="addToCart('Rainbow Burger', 9.99)">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="pizza.jpg" alt="Pizza">
+        <h3>Neon Pizza</h3>
+        <p>$14.99</p>
+        <button onclick="addToCart('Neon Pizza', 14.99)">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="salad.jpg" alt="Salad">
+        <h3>Colorful Salad</h3>
+        <p>$6.99</p>
+        <button onclick="addToCart('Colorful Salad', 6.99)">Add to Cart</button>
+      </div>
+      
+      <div class="menu-item">
+        <img src="smoothie.jpg" alt="Smoothie">
+        <h3>Tropical Smoothie</h3>
+        <p>$5.99</p>
+        <button onclick="addToCart('Tropical Smoothie', 5.99)">Add to Cart</button>
+      </div>
+    </section>
+
+    <section class="cart">
+      <h2>Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <p>Total: $<span id="totalPrice">0.00</span></p>
+      <button onclick="checkout()">Checkout</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 ColorBite | All Rights Reserved</p>
+  </footer>
+
+  <script src="food.js"></script>
+</body>
+</html>
